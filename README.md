@@ -164,8 +164,8 @@ git push -u origin master:main
 ## Optional: switch local branch
 
 ```powershell
-git branch -m nwlocal
-git branch --set-upstream-to=origin/main nwlocal
+git branch -m YourLocal
+git branch --set-upstream-to=origin/main YourLocal
 ```
 
 ---

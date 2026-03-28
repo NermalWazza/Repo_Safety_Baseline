@@ -155,7 +155,7 @@ Recommended:
 ## Publish to GitHub
 
 ```powershell
-git remote add origin https://github.com/NermalWazza/Repo_Safety_Baseline.git
+git remote add origin https://github.com/<UserName>/<RepopsitoryName>.git
 git push -u origin master:main
 ```
 

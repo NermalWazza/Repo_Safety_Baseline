@@ -50,15 +50,15 @@ Keep it lean.
 
 ## Suggested structure
 
-.
-├── README.md
-├── .gitignore
-├── .gitattributes
-├── .env.example
-├── .pre-commit-config.yaml
-├── scripts/
-│   ├── Setup/
-│   └── Audit/
+    .
+    ├── README.md
+    ├── .gitignore
+    ├── .gitattributes
+    ├── .env.example
+    ├── .pre-commit-config.yaml
+    ├── scripts/
+    │   ├── Setup/
+    │   └── Audit/
 
 ---
 
@@ -66,9 +66,11 @@ Keep it lean.
 
 ### 1. Create new repo
 
+```powershell
 mkdir My_New_Project
 cd My_New_Project
 git init
+```
 
 ---
 
@@ -80,21 +82,27 @@ Copy from this repo into your new project.
 
 ### 3. Setup environment (if Python)
 
+```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
+```
 
 ---
 
 ### 4. Install pre-commit
 
+```powershell
 pip install pre-commit
 pre-commit install
+```
 
 ---
 
 ### 5. Setup environment file
 
+```powershell
 copy .env.example .env
+```
 
 Never commit `.env`.
 
@@ -104,8 +112,8 @@ Never commit `.env`.
 
 Ensure it excludes:
 
-- .env
-- .venv/
+- `.env`
+- `.venv/`
 - logs
 - cache
 - OS junk
@@ -115,8 +123,10 @@ Ensure it excludes:
 
 ### 7. First commit (safe)
 
+```powershell
 git add .
 git commit -m "Initial safe baseline"
+```
 
 If hooks modify files, re-add and commit again.
 
@@ -137,28 +147,35 @@ If hooks modify files, re-add and commit again.
 
 Recommended:
 
-- main → clean public branch (GitHub)
-- YourLocal → your local working branch
+- `main` → clean public branch (GitHub)
+- `YourLocal` → your local working branch
 
 ---
 
 ## Publish to GitHub
 
-From local YourLocal:
+```powershell
+git remote add origin https://github.com/NermalWazza/Repo_Safety_Baseline.git
+git push -u origin master:main
+```
 
-git push -u origin YourLocal:main
+---
 
-This keeps:
+## Optional: switch local branch
 
-- local branch = YourLocal
-- remote branch = main
+```powershell
+git branch -m nwlocal
+git branch --set-upstream-to=origin/main nwlocal
+```
 
 ---
 
 ## Ongoing workflow
 
-git push origin YourLocal:main
-git pull origin main
+```powershell
+git push
+git pull
+```
 
 ---
 

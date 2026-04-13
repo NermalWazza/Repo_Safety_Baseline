@@ -24,3 +24,6 @@ Thumbs.db
 # .NET
 bin/
 obj/
+
+# VS Code local config
+.vscode/mcp.json

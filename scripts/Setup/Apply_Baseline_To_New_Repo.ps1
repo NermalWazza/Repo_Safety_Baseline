@@ -1,4 +1,4 @@
-#requires -version 5.1
+﻿#requires -version 5.1
 
 param(
     [Parameter(Mandatory = $true)]
@@ -110,6 +110,7 @@ $BaselineFiles = @(
     ".gitignore",
     ".gitattributes",
     ".pre-commit-config.yaml",
+    ".secrets.baseline",
     ".env.example",
     "README.md",
     "BASELINE_MANIFEST.md"

@@ -12,3 +12,12 @@
       - id: detect-secrets
         args: ['--baseline', '.secrets.baseline']
         exclude: ^\.secrets\.baseline$
+
+  - repo: local
+    hooks:
+      - id: trufflehog
+        name: TruffleHog Secret Scan
+        entry: trufflehog filesystem --fail --no-update --only-verified .
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
